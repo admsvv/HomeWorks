@@ -1,14 +1,15 @@
 package com.softserve.academy.task_4;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        double x = 11, a = 2;
-        double y = Math.pow(x, a);
-        System.out.println(y);
-
-        double х = 16;
-        double у = Math.sqrt(х);
-        System.out.println(у);
+        int num = 10, i = 1, sum = 0;
+        while(i <= num){
+            sum += i;
+            i++;
+        }
+        System.out.println("Sum = " + sum);
     }
 }

@@ -5,18 +5,39 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        double radius;
-        Scanner myScan = new Scanner(System.in);
-        System.out.println("Введіть радіус клумби (у метрах) . . . ");
+        Scanner scanner = new Scanner(System.in);
+//        int year = 0000;
+//        boolean isLeap;
+//
+//        if (year % 4 != 0) {
+//            isLeap = false;
+//        }
+//        else {
+//            if (year % 100 != 0) {
+//                isLeap = true;
+//            }
+//            else {
+//                if (year % 400 == 0) {
+//                    isLeap = true;
+//                }
+//                else {
+//                    isLeap = false;
+//                }
+//            }
+//        }
+//        System.out.println(isLeap);
+//    }
+//}
 
-        radius = myScan.nextDouble();
-        double perimeter = Math.PI * 2 * radius;
-        System.out.printf("По периметру клумба має %.2f", perimeter);
-        System.out.println(" м");
+        int year = 2019;
+        boolean isLeap;
 
-        double area = Math.PI * Math.pow(radius, 2);
-        System.out.printf("Площа клумби %.2f", area);
-        System.out.println(" м" + '\u00B2');
-
+        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+            isLeap = true;
+        }
+        else {
+            isLeap = false;
+        }
+        System.out.println(isLeap);
     }
 }
